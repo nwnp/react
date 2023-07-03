@@ -4,7 +4,7 @@ import Wrapper from './components/Wrapper';
 function App() {
   return (
     <Wrapper>
-      <Hello color="pink"/>
+      <Hello color="blue" name="Jin" />
     </Wrapper>
   );
 }

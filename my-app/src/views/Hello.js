@@ -1,16 +1,13 @@
 const Hello = ({name, color}) => {
   return (
     <div className="App">
-      <p style={ color === "pink" ? "pink" : "blue"}>Hello {name}!!!!!!</p>
-      <p>
-        {name === "React" ? name: "World"}
-      </p>
+      <p style={{color}}>Hello {name}</p>
     </div>
   );
 }
 
 Hello.defaultProps = {
-  name: "World",
+  name: "world",
   color: "blue"
 }
 
