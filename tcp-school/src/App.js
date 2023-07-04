@@ -4,6 +4,7 @@ import { Wrapper } from './components/Wrapper';
 import { Counter } from './components/Counter';
 import { Area } from './components/Area';
 import { Button } from './components/Button';
+import { ControlPanel } from './components/ControlPanel';
 
 export const App = () => {
   return (
@@ -17,6 +18,8 @@ export const App = () => {
       <Counter />
       <Area />
       <Button name="hello"/>
+      <ControlPanel name="jin" isLoggedIn={true}/>
+      <ControlPanel isLoggedIn={false}/>
     </div>
   );
 }

@@ -7,3 +7,19 @@
   background-color: blue;
   text-align: left;
 }
+
+.control {
+  button {
+    color: white;
+    background-color: blue;
+    border-radius: 8px;
+    border: none;
+    width: 70px;
+    height: 30px;
+    margin-top: 10px;
+  }
+  button:hover {
+    background-color: #1e90ff;
+    transition: 0.3s;
+  }
+}
