@@ -1,4 +1,5 @@
 import { useState } from "react";
+import '../style.scss';
 
 export const Area = () => {
   const [size, setSize] = useState({
@@ -20,7 +21,7 @@ export const Area = () => {
   };
 
   return(
-    <div>
+    <div className="area">
       <p>
         넓이: {size.width * size.height}
       </p>
