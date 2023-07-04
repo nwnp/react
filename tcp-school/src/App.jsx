@@ -5,6 +5,7 @@ import { Counter } from './components/Counter';
 import { Area } from './components/Area';
 import { Button } from './components/Button';
 import { ControlPanel } from './components/ControlPanel';
+import { Array } from './components/Array';
 
 export const App = () => {
   return (
@@ -20,6 +21,7 @@ export const App = () => {
       <Button name="hello"/>
       <ControlPanel name="jin" isLoggedIn={true}/>
       <ControlPanel isLoggedIn={false}/>
+      <Array />
     </div>
   );
 }
