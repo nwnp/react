@@ -6,6 +6,8 @@ import { Area } from './components/Area';
 import { Button } from './components/Button';
 import { ControlPanel } from './components/ControlPanel';
 import { Array } from './components/Array';
+import { StateHook } from './components/hooks/StateHook';
+import { ReducerHook } from './components/hooks/ReducerHook';
 
 export const App = () => {
   return (
@@ -22,6 +24,8 @@ export const App = () => {
       <ControlPanel name="jin" isLoggedIn={true}/>
       <ControlPanel isLoggedIn={false}/>
       <Array />
+      <StateHook />
+      <ReducerHook />
     </div>
   );
 }
