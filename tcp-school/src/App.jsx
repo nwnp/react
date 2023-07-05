@@ -8,6 +8,7 @@ import { ControlPanel } from './components/ControlPanel';
 import { Array } from './components/Array';
 import { StateHook } from './components/hooks/StateHook';
 import { ReducerHook } from './components/hooks/ReducerHook';
+import { ContextHook } from './components/hooks/ContextHook';
 
 export const App = () => {
   return (
@@ -26,6 +27,7 @@ export const App = () => {
       <Array />
       <StateHook />
       <ReducerHook />
+      <ContextHook />
     </div>
   );
 }
