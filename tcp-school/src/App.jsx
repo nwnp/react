@@ -1,4 +1,5 @@
 import './App.scss';
+import { Routes, Route } from 'react-router-dom';
 import { Greeting } from './components/Greeting';
 import { Wrapper } from './components/Wrapper';
 import { Counter } from './components/Counter';
@@ -9,6 +10,9 @@ import { Array } from './components/Array';
 import { StateHook } from './components/hooks/StateHook';
 import { ReducerHook } from './components/hooks/ReducerHook';
 import { ContextHook } from './components/hooks/ContextHook';
+import { About } from './components/routes/About';
+import { Home } from './components/routes/Home';
+import { Menu } from './components/routes/Menu';
 
 export const App = () => {
   return (
@@ -28,6 +32,12 @@ export const App = () => {
       <StateHook />
       <ReducerHook />
       <ContextHook />
+      <h5>React Router</h5>
+      <Routes>
+        <Route path="/about" element={<About />}></Route>
+        <Route path="/home" element={<Home />}></Route>
+      </Routes>
+      <Menu />
     </div>
   );
 }
