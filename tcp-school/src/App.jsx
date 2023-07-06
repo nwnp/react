@@ -1,5 +1,5 @@
 import './App.scss';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 import { Greeting } from './components/Greeting';
 import { Wrapper } from './components/Wrapper';
 import { Counter } from './components/Counter';
@@ -13,6 +13,7 @@ import { ContextHook } from './components/hooks/ContextHook';
 import { About } from './components/routes/About';
 import { Home } from './components/routes/Home';
 import { Menu } from './components/routes/Menu';
+import { PostIndex } from './components/routes/post/PostIndex';
 
 export const App = () => {
   return (
@@ -37,7 +38,9 @@ export const App = () => {
         <Route path="/about" element={<About />}></Route>
         <Route path="/home" element={<Home />}></Route>
       </Routes>
+      <PostIndex />
       <Menu />
+      <Outlet />
     </div>
   );
 }
