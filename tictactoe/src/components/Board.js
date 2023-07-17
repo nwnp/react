@@ -1,52 +1,40 @@
-import React, { Component } from "react";
+import React from "react";
 import Square from "./Square";
 import "./Board.css";
+import { useState } from "react";
 
-export default class Board extends Component {
-  constructor() {
-    super();
-    this.state = {
-      squares: Array(9).fill(null),
-    };
-  }
+const Board = () => {
+  const [squares, setSquares] = useState(Array(9).fill(null));
 
-  renderSqaure(i) {
-    return (
-      <Square
-        value={this.state.squares[i]}
-        onClick={() => this.handleClick(i)}
-      />
-    );
-  }
+  const handleClick = (i) => {
+    const newSquares = squares.slice();
+    newSquares[i] = "X";
+    setSquares(newSquares);
+  };
 
-  handleClick(i) {
-    const squares = this.state.squares.slice();
-    squares[i] = "X";
-    this.setState({ squares });
-  }
+  const renderSqaure = (i) => {
+    return <Square value={squares[i]} onClick={() => handleClick(i)} />;
+  };
 
-  render() {
-    const status = "Next player: X";
-
-    return (
-      <div>
-        <div className="status">{status}</div>
-        <div className="board-row">
-          {this.renderSqaure(0)}
-          {this.renderSqaure(1)}
-          {this.renderSqaure(2)}
-        </div>
-        <div className="board-row">
-          {this.renderSqaure(3)}
-          {this.renderSqaure(4)}
-          {this.renderSqaure(5)}
-        </div>
-        <div className="board-row">
-          {this.renderSqaure(6)}
-          {this.renderSqaure(7)}
-          {this.renderSqaure(8)}
-        </div>
+  return (
+    <div>
+      <div className="board-row">
+        {renderSqaure(0)}
+        {renderSqaure(1)}
+        {renderSqaure(2)}
       </div>
-    );
-  }
-}
+      <div className="board-row">
+        {renderSqaure(3)}
+        {renderSqaure(4)}
+        {renderSqaure(5)}
+      </div>
+      <div className="board-row">
+        {renderSqaure(6)}
+        {renderSqaure(7)}
+        {renderSqaure(8)}
+      </div>
+    </div>
+  );
+};
+
+export default Board;
