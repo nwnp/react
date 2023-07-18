@@ -18,7 +18,7 @@ const App = () => {
       <input value={value} onChange={(e) => setValue(e.target.value)}></input>
       <div style={{ display: "flex" }}>
         <A message={value} posts={posts} />
-        <B />
+        <B message={value} posts={posts} />
       </div>
     </div>
   );
