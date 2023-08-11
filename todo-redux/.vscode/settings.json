@@ -1,0 +1,7 @@
+{
+    "editor.formatOnPaste": true,
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "reactSnippets.settings.prettierEnabled": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+}
