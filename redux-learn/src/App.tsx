@@ -1,7 +1,7 @@
 import "./App.css";
 
 type PropsType = {
-  value: number;
+  value: any;
   onIncrement: () => void;
   onDecrement: () => void;
 };
@@ -9,7 +9,7 @@ type PropsType = {
 function App({ value, onIncrement, onDecrement }: PropsType) {
   return (
     <div className="App">
-      Clicked: {value} times
+      {/* Clicked: {value} times */}
       <button onClick={onIncrement}>+</button>
       <button onClick={onDecrement}>-</button>
     </div>
