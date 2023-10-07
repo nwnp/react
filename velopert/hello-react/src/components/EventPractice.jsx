@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const EventPractice = () => {
   // variables
   const [message, setMessage] = useState("");
+  const [added, setAdded] = useState([]);
 
   // functions
   const onChangeInput = (e) => {
@@ -14,7 +15,10 @@ const EventPractice = () => {
   };
 
   const onKeyPress = (e) => {
-    if (e.key === "Enter") onClickButton();
+    if (e.key === "Enter") {
+      setAdded([...added, message]);
+      setMessage("");
+    }
   };
 
   return (
@@ -28,6 +32,13 @@ const EventPractice = () => {
         onKeyPress={onKeyPress}
       />
       <button onClick={onClickButton}>ALERT</button>
+      <div>
+        <ul>
+          {added.map((item, idx) => {
+            return <li key={idx}>{item}</li>;
+          })}
+        </ul>
+      </div>
     </div>
   );
 };

@@ -4,6 +4,7 @@ import MySecondComponent from "./components/MySecondComponent";
 import Counter from "./components/Counter";
 import Say from "./components/Say";
 import EventPractice from "./components/EventPractice";
+import IteractionSample from "./components/IteractionSample";
 
 function App() {
   const [name, setName] = useState("J2W");
@@ -23,6 +24,7 @@ function App() {
       <Counter />
       <Say />
       <EventPractice />
+      <IteractionSample />
     </div>
   );
 }
