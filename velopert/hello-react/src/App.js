@@ -2,6 +2,8 @@ import { useState } from "react";
 import MyComponent from "./components/MyComponent";
 import MySecondComponent from "./components/MySecondComponent";
 import Counter from "./components/Counter";
+import Say from "./components/Say";
+import EventPractice from "./components/EventPractice";
 
 function App() {
   const [name, setName] = useState("J2W");
@@ -19,6 +21,8 @@ function App() {
       <div>-------------------------------</div>
       <MySecondComponent age={age} setAge={setAge} />
       <Counter />
+      <Say />
+      <EventPractice />
     </div>
   );
 }
