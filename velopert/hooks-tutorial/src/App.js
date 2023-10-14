@@ -2,6 +2,8 @@ import { useState } from "react";
 import Counter from "./components/Counter";
 import Info from "./components/Info";
 import CounterReducer from "./components/CounterReducer";
+import InfoReducer from "./components/InfoReducer";
+import Average from "./components/Average";
 
 function App() {
   const [visible, setVisible] = useState(false);
@@ -20,6 +22,8 @@ function App() {
         <hr />
         {visible && <Info />}
         <CounterReducer />
+        <InfoReducer />
+        <Average />
       </div>
     </div>
   );
